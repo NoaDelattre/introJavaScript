@@ -7,11 +7,61 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='fullCraft.js'></script>
+    
 </head>
 <body>
     <h1>Hello World!</h1>
     <p>Test JavaScript</p>
     <p>tung tung tung sahur</p>
+    <div id="div1" ondblclick="alert('Div double-clicked!')">Mon texte dans la div 1</div>
+    <div id="div2" ondrag="changerPositionDiv(event.clientX,event.clientY)">Mon texte dans la div 1</div>
+    <div id ="idDeMadiv1"
+    draggable="true">Test div 1</div>
+
 </body>
-<script src='Code.js'></script>
+    <script src='Code.js'></script>
+    <script>
+        var x = 10;
+        var y = 20;
+
+        //function afficherCoordonnees(event){
+            //var div = document.getElementById("div1");
+            //var rect = div.getBoundingClientRect();
+            //console.log("Position de la div : ("+ rect.left + rect.top +")");
+            //console.log("Position de la souris : ("+ event.clientX + event.clientY +")");
+        //}
+
+        //function récupérerPositionDiv(){
+            //var div = document.getElementById("div1");
+            //var rect = div.getBoundingClientRect();
+            //return { x: rect.left, y: rect.top};
+        //}
+
+        function changerPositionDiv(newX,newY){
+            var div = document.getElementById("div1");
+            div.style.position = "absolute";
+            div.style.left = newX + "px";
+            div.style.top = newY + "px";
+        }
+
+        var uneDivQuelconque = document.getElementById("idDeMadiv1");
+
+        uneDivQuelconque.addEventListener("click",toto);
+
+        function toto() {
+            alert("Vous avez cliqué")
+        }
+
+         function toto2(event) {
+            // récupérer la couleur de fond
+
+            // incréménter la couleur de fond
+        }
+
+        uneDiv.onclick = function(event) {
+            var newX = event.pageX;
+            var newY = event.pageY;
+            changerPositionDiv(newX,newY);
+        }
+    </script>
 </html>
